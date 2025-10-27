@@ -1,0 +1,26 @@
+module fourb_vm(
+  input logic [3:0] A,
+  input logic [3:0] B,
+  output logic [7:0] Result
+);
+
+  logic [3:0] VMResults [3:0];
+  logic [2:0] CLASums [2:0];
+  logic CLACout1, CLACout2, CLACout3;
+
+  VedicMultiplier_2bit vm1(.A(A[1:0]), .B(B[1:0]), .Result(VMResults[0]));
+  VedicMultiplier_2bit vm2(.A(A[3:2]), .B(B[3:2]), .Result(VMResults[1]));
+  VedicMultiplier_2bit vm3(.A(A[1:0]), .B(B[3:2]), .Result(VMResults[2]));
+  VedicMultiplier_2bit vm4(.A(A[3:2]), .B(B[1:0]), .Result(VMResults[3]));
+
+  CarryLookaheadAdder_2bit cla1(.A(VMResults[0]), .B({2'b0, VMResults[1]}), .Cin(1'b0), .Sum(CLASums[0]), .Cout(CLACout1));
+  CarryLookaheadAdder_2bit cla2(.A(CLASums[0]), .B({1'b0, VMResults[2]}), .Cin(CLACout1), .Sum(CLASums[1]), .Cout(CLACout2));
+  CarryLookaheadAdder_2bit cla3(.A(CLASums[1]), .B({1'b0, VMResults[3]}), .Cin(CLACout2), .Sum(CLASums[2]), .Cout(CLACout3));
+
+  always_comb begin
+    Result = CLASums[2];
+    Result[6:3] = CLASums[1];
+    Result[2:0] = CLASums[0];
+  end
+
+endmodule

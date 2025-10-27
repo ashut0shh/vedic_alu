@@ -1,0 +1,28 @@
+Quartus Prime Archive log --	C:/Users/ashutosh sriram/OneDrive/Desktop/system verilog/v_alu_final/fourb_vm_tmp_archive.qarlog
+
+Archive:	C:/Users/ashutosh sriram/OneDrive/Desktop/system verilog/v_alu_final/fourb_vm_tmp_archive.qar
+Date:		Fri Nov 24 23:24:15 2023
+Quartus Prime		22.1std.2 Build 922 07/20/2023 SC Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/ashutosh sriram/OneDrive/Desktop/system verilog/v_alu_final/CarryLookaheadAdder_2bit.sv
+C:/Users/ashutosh sriram/OneDrive/Desktop/system verilog/v_alu_final/VedicMultiplier_2bit.sv
+C:/Users/ashutosh sriram/OneDrive/Desktop/system verilog/v_alu_final/Waveform2.vwf
+C:/Users/ashutosh sriram/OneDrive/Desktop/system verilog/v_alu_final/Waveform3.vwf
+C:/Users/ashutosh sriram/OneDrive/Desktop/system verilog/v_alu_final/Waveform4.vwf
+C:/Users/ashutosh sriram/OneDrive/Desktop/system verilog/v_alu_final/Waveform5.vwf
+C:/Users/ashutosh sriram/OneDrive/Desktop/system verilog/v_alu_final/fourb_vm.qpf
+C:/Users/ashutosh sriram/OneDrive/Desktop/system verilog/v_alu_final/fourb_vm.qsf
+C:/Users/ashutosh sriram/OneDrive/Desktop/system verilog/v_alu_final/fourb_vm.sv
+C:/Users/ashutosh sriram/OneDrive/Desktop/system verilog/vedicadder1/BinaryVedicAdder_4bit.sv
+c:/intelfpga_lite/22.1std/quartus/bin64/assignment_defaults.qdf
+	======= Total: 11 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Fri Nov 24 23:24:16 2023
+Source archive file:	C:/Users/ashutosh sriram/OneDrive/Desktop/system verilog/v_alu_final/fourb_vm_tmp_archive.qar
+Archive was extracted into	C:/Users/ashutosh sriram/OneDrive/Desktop/system verilog/test/
+		 - successfully.

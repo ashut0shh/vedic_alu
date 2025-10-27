@@ -1,0 +1,20 @@
+module VedicMultiplier_2bit(
+  input logic [1:0] A,
+  input logic [1:0] B,
+  output logic [3:0] Result
+);
+
+  logic [3:0] PartialProducts [1:0];
+
+  // Generate partial products
+  always_comb begin
+    PartialProducts[0] = {2'b0, A[0]} & B;
+    PartialProducts[1] = {1'b0, A[1]} & B;
+  end
+
+  // Accumulate the partial products
+  always_comb begin
+    Result = PartialProducts[0] + PartialProducts[1];
+  end
+
+endmodule
